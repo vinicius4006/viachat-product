@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/styles/fonts/DM_Sans/DMSans-Regular.ttf");
+  font-family: "Syne";
+  src: url("./fonts/Syne/Syne-VariableFont_wght.ttf");
+  font-family: "Krona One";
+  src: url("./fonts/Krona_One/KronaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Caudex";
+  src: url("./fonts/Caudex/Caudex-Regular.ttf");
+  font-family: "Federo";
+  src: url("./fonts/Federo/Federo-Regular.ttf");
+  font-family: "Otama";
+  src: url("./fonts/Otama/Otama-ep.otf");
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./fonts/Rubik/static/Rubik-Regular.ttf');
+}
+
+
+* {
+  @apply m-0 p-0 box-border font-rubik;
+}
+
+.entrarButton {
+  @apply bg-[#53a08e] text-white px-5 py-2 relative top-1 md:static 
+  rounded-3xl tracking-wider shadow
+   transition-all duration-300 outline-none 
+   hover:bg-[#7ebea3] hover:shadow-md;
+}
+
+.efeitoUnderline {
+  @apply cursor-pointer inline-block relative 
+  after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[0.125rem]
+ after:bottom-0 after:left-0 after:bg-slate-900 after:origin-bottom-right after:transition-transform after:duration-300
+ hover:after:scale-x-100 hover:after:origin-bottom-left;
+}
+
+.estiloButtonMobile {
+  @apply cursor-pointer hover:bg-[#00AED7]
+  text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium;
+}
+
+.estiloTipoGrid {
+  @apply flex flex-col items-center w-[8.25rem];
+}
+
+.spanText {
+  @apply text-xs mt-2 text-gray-600;
+}
+
+.pText {
+  @apply text-sm;
+}
+
+.linhaInfo {
+  @apply h-1 bg-[#3e877b]
+  w-48 rounded-lg opacity-30
+  absolute hidden md:block;
+}
+
+.card {
+  @apply shadow-xl  z-10 bg-[#a5e0d6d5] 
+  max-w-[16rem] h-[16rem] rounded-lg;
+}
+
+.feedback-input {
+  @apply text-black font-medium text-lg 
+  rounded-md leading-6 bg-transparent border-2 border-[#53b3dc] 
+  border-solid transition-all duration-500 p-3 mb-4 w-full box-border outline-0;
+}
+
+.feedback-input {
+  @apply focus:border-2 focus:border-solid focus:border-[#ABE3D5];
+}
+
+textarea {
+  @apply h-40 leading-5 resize-y text-blue-500;
+}
+
+[type="submit"] {
+  @apply w-full bg-[#2491c0] rounded-md border-0 cursor-pointer 
+  text-white text-2xl pt-2 pb-2 transition-all duration-300 -mt-1 
+  hover:bg-[#5fecc9]
+  focus:bg-green-500 focus:scale-75;
+}
+
+.container {
+  @apply relative w-[5rem] h-[3.1rem] rounded-[3.1rem] border-2 
+  border-solid border-blue-400 duration-500 hover:w-32 
+  hover:border-2 hover:border-solid hover:border-blue-500;
+}
+
+.container .next {
+  @apply absolute top-[50%] right-8 block 
+  w-3 h-3 border-t-2 border-t-black
+  border-l-2 border-l-black z-10 translate-y-[-50%] rotate-[135deg]
+  cursor-pointer opacity-0 duration-500;
+}
+
+.container:hover .next {
+  @apply opacity-100 right-5;
+}
+.container .prev {
+  @apply absolute top-[50%] left-8 block 
+  w-3 h-3 border-t-2 border-t-black
+  border-l-2 border-l-black z-10 translate-y-[-50%] rotate-[315deg]
+  cursor-pointer opacity-0 duration-500;
+}
+
+.container:hover .prev {
+  @apply opacity-100 left-5;
+}
+
+.box span {
+  @apply absolute block w-full h-full text-center 
+leading-10 text-black text-2xl;
+}
+
+.bn632-hover {
+  @apply w-40 text-base font-semibold text-white cursor-pointer m-5 h-14 text-center
+  border-none bg-[length:300%_100%] rounded-[3.1rem] transition-all duration-300 ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  @apply outline;
+}
+
+.bn632-hover.bn18 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 50px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 5px;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #bada55;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
