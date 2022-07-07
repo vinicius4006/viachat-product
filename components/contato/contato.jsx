@@ -8,7 +8,7 @@ import axios from "axios";
 const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: require("../../../public/img/lotties/work-team.json"),
+  animationData: require("../../public/img/lotties/work-team.json"),
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },

@@ -50,7 +50,7 @@ function SampleNextArrow(props) {
       bg-[#00C8C4] rounded-3xl absolute top-[18rem] md:top-[-5.18rem] left-[10rem] md:left-[55rem]"
       onClick={onClick}
     >
-      <Image src={require('../../../public/img/arrow-right.svg')} alt={'arrow-right'} width={50} height={50} />
+      <Image src={require('../../public/img/arrow-right.svg')} alt={'arrow-right'} width={50} height={50} />
     </div>
   );
 }
@@ -64,7 +64,7 @@ function SamplePrevArrow(props) {
       "
       onClick={onClick}
     >
-      <Image src={require('../../../public/img/arrow-left.svg')} alt={'arrow-left'} width={50} height={50} />
+      <Image src={require('../../public/img/arrow-left.svg')} alt={'arrow-left'} width={50} height={50} />
     </div>
   );
 }
@@ -98,25 +98,25 @@ console.log('Build Funcoes')
           className="w-9/12 mx-auto mt-8 md:mt-0 md:ml-[8rem]"
         >
           <Card
-            srcIcone={require("../../../public/img/lotties/shooting-stars.json")}
+            srcIcone={require("../../public/img/lotties/shooting-stars.json")}
             title={"Destaque no atendimento"}
             description={"Agilidade em atender e entender as necessidades de cada cliente."}
             
           />
           <Card
-            srcIcone={require("../../../public/img/lotties/consultation.json")}
+            srcIcone={require("../../public/img/lotties/consultation.json")}
             title={"Comunicação rápida e clara"}
             description={"Ambientes personalizados para que você e seus clientes."}
             
           />
           <Card
-            srcIcone={require("../../../public/img/lotties/robot-assist.json")}
+            srcIcone={require("../../public/img/lotties/robot-assist.json")}
             title={"Automoção e produtividade"}
             description={"Bots personalizados de acordo com a necessidade presente"}
             
           />
           <Card
-            srcIcone={require("../../../public/img/lotties/layers.json")}
+            srcIcone={require("../../public/img/lotties/layers.json")}
             title={"Funcionalidades de ponta"}
             description={"Tudo isso e muito mais para sua equipe trabalhar e atender bem."}
             

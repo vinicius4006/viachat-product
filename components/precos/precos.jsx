@@ -1,5 +1,5 @@
 import { HeroSectionPreco } from "./heroSectionPro";
-import { HeroSectionTeste } from "./outroLayout/heroSectionTeste";
+
 
 export default function Precos() {
     return (

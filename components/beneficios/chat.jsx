@@ -44,7 +44,7 @@ const settings = {
 
 const defaultOptions = {
   autoplay: true,
-  animationData: require("../../../public/img/lotties/sucess.json"),
+  animationData: require("../../public/img/lotties/sucess.json"),
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },
@@ -59,7 +59,7 @@ function SampleNextArrow(props) {
       onClick={onClick}
     >
       <Image
-        src={require("../../../public/img/arrow-right.svg")}
+        src={require("../../public/img/arrow-right.svg")}
         alt={"arrow-right"}
         width={50}
         height={50}
@@ -78,7 +78,7 @@ function SamplePrevArrow(props) {
       onClick={onClick}
     >
       <Image
-        src={require("../../../public/img/arrow-left.svg")}
+        src={require("../../public/img/arrow-left.svg")}
         alt={"arrow-left"}
         width={50}
         height={50}
@@ -175,7 +175,7 @@ export const Chat = () => {
             <Slider {...settings}>
               <div>
                 <Image
-                  src={require("../../../public/img/dashboard.png")}
+                  src={require("../../public/img/dashboard.png")}
                   className={"rounded-xl"}
                   alt={"dashboard"}
                   width={widthSvg}
@@ -184,7 +184,7 @@ export const Chat = () => {
               </div>
               <div>
                 <Image
-                  src={require("../../../public/img/chat.png")}
+                  src={require("../../public/img/chat.png")}
                   className={"rounded-xl"}
                   alt={"chat"}
                   width={widthSvg}
@@ -193,7 +193,7 @@ export const Chat = () => {
               </div>
               <div>
                 <Image
-                  src={require("../../../public/img/analises.png")}
+                  src={require("../../public/img/analises.png")}
                   className={"rounded-xl"}
                   alt={"analises"}
                   width={widthSvg}
@@ -202,7 +202,7 @@ export const Chat = () => {
               </div>
               <div>
                 <Image
-                  src={require("../../../public/img/monitoramento.png")}
+                  src={require("../../public/img/monitoramento.png")}
                   className={"rounded-xl"}
                   alt={"monitoria"}
                   width={widthSvg}

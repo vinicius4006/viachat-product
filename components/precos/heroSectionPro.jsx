@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { useWindowSize } from "../heroSection/hook";
 import Slider from "react-slick";
 import Image from "next/image";
-import wppshare from "../../../public/img/lotties/wpp-share.json";
-import instagram from "../../../public/img/lotties/instagram.json";
-import messenger from "../../../public/img/lotties/messenger.json";
-import telegram from "../../../public/img/lotties/telegram.json";
-import robo from "../../../public/img/lotties/robot-assist.json";
-import people from "../../../public/img/lotties/people.json";
+import wppshare from "../../public/img/lotties/wpp-share.json";
+import instagram from "../../public/img/lotties/instagram.json";
+import messenger from "../../public/img/lotties/messenger.json";
+import telegram from "../../public/img/lotties/telegram.json";
+import robo from "../../public/img/lotties/robot-assist.json";
+import people from "../../public/img/lotties/people.json";
 
 import { defaultOptions } from "./defaultOptions";
 import { ButtonExperimente } from "../heroSection/buttonExperiment";
@@ -33,7 +33,7 @@ function SampleNextArrow(props) {
       onClick={onClick}
     >
       <Image
-        src={require("../../../public/img/arrow-right.svg")}
+        src={require("../../public/img/arrow-right.svg")}
         alt={"arrow-right"}
         width={50}
         height={50}
@@ -52,7 +52,7 @@ function SamplePrevArrow(props) {
       onClick={onClick}
     >
       <Image
-        src={require("../../../public/img/arrow-left.svg")}
+        src={require("../../public/img/arrow-left.svg")}
         alt={"arrow-left"}
         width={50}
         height={50}
@@ -151,38 +151,38 @@ export const HeroSectionPreco = () => {
           <Slider {...settings} className="w-full mx-auto">
             <Card
               alt={"wpp"}
-              icone={require("../../../public/img/whatsapp.svg")}
+              icone={require("../../public/img/whatsapp.svg")}
               label={"Quantidade de números"}
               key={"wpp"}
             />
             <Card
               alt={"inst"}
-              icone={require("../../../public/img/instagram.svg")}
+              icone={require("../../public/img/instagram.svg")}
               label={"Quantidade de perfis"}
               key={"inst"}
             />
             <Card
               alt={"mess"}
-              icone={require("../../../public/img/messenger.svg")}
+              icone={require("../../public/img/messenger.svg")}
               label={"Quantidade de páginas"}
               key={"mess"}
             />
 
             <Card
               alt={"tele"}
-              icone={require("../../../public/img/telegram.svg")}
+              icone={require("../../public/img/telegram.svg")}
               label={"Quantidade de números"}
               key={"tele"}
             />
             <Card
               alt={"rob"}
-              icone={require("../../../public/img/robot.svg")}
+              icone={require("../../public/img/robot.svg")}
               label={"Quantidade de bots"}
               key={"rob"}
             />
             <Card
               alt={"people"}
-              icone={require("../../../public/img/people.svg")}
+              icone={require("../../public/img/people.svg")}
               label={"Quantidade de Atendentes"}
               key={"people"}
             />
@@ -191,45 +191,45 @@ export const HeroSectionPreco = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card
               alt={"wpp"}
-              icone={require("../../../public/img/whatsapp.svg")}
+              icone={require("../../public/img/whatsapp.svg")}
               label={"Quantidade de números"}
               key={"wpp"}
             />
             <Card
               alt={"inst"}
-              icone={require("../../../public/img/instagram.svg")}
+              icone={require("../../public/img/instagram.svg")}
               label={"Quantidade de perfis"}
               key={"inst"}
             />
             <Card
               alt={"mess"}
-              icone={require("../../../public/img/messenger.svg")}
+              icone={require("../../public/img/messenger.svg")}
               label={"Quantidade de páginas"}
               key={"mess"}
             />
 
             <Card
               alt={"tele"}
-              icone={require("../../../public/img/telegram.svg")}
+              icone={require("../../public/img/telegram.svg")}
               label={"Quantidade de números"}
               key={"tele"}
             />
             <Card
               alt={"rob"}
-              icone={require("../../../public/img/robot.svg")}
+              icone={require("../../public/img/robot.svg")}
               label={"Quantidade de bots"}
               key={"rob"}
             />
             <Card
               alt={"people"}
-              icone={require("../../../public/img/people.svg")}
+              icone={require("../../public/img/people.svg")}
               label={"Quantidade de Atendentes"}
               key={"people"}
             />
             <div className="relative md:left-[22rem] right-auto">
               <Card
                 alt={"results"}
-                icone={require("../../../public/img/coin.svg")}
+                icone={require("../../public/img/coin.svg")}
                 label={"Total"}
                 visiblePlusMinus={true}
                 key={"results"}
@@ -245,7 +245,7 @@ export const HeroSectionPreco = () => {
           {" "}
           <Card
             alt={"results"}
-            icone={require("../../../public/img/coin.svg")}
+            icone={require("../../public/img/coin.svg")}
             label={"Total"}
             visiblePlusMinus={true}
             key={"results"}

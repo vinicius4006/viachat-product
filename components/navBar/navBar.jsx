@@ -26,7 +26,7 @@ export const NavBar = () => {
                     duration={500}
                   >
                     <Image
-                      src={require("../../../public/img/logo.png")}
+                      src={require("../../public/img/logo.png")}
                       alt="logo"
                       width={46}
                       height={46}

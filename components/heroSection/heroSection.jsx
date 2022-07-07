@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import React from "react";
 import { useWindowSize } from "./hook";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export const HeroSection = () => {
     loop: true,
     autoplay: true,
     stop: true,
-    animationData: require("../../../public/img/lotties/whatsapp.json"),
+    animationData: require("../../public/img/lotties/whatsapp.json"),
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -63,7 +63,7 @@ export const HeroSection = () => {
           <>
            <div className="my-8 ml-5">
            <Image
-              src={require("../../../public/img/wpp-mob.svg")}
+              src={require("../../public/img/wpp-mob.svg")}
               alt={"wpp-mob"}
               width={150}
               height={150}

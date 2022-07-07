@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { useEffect } from "react";
 import { SubInfo } from "./cardSubInfo";
 import { TitleSection } from "./titleSection";
@@ -40,7 +40,7 @@ export const InfoGeral = () => {
       md:grid-rows-1 md:gap-x-48 md:mt-28 md:grid-flow-col"
         >
           <SubInfo
-            srcImg={require("../../../public/img/statistics.svg")}
+            srcImg={require("../../public/img/statistics.svg")}
             alt={"statistics"}
             title={"Escalabilidade"}
             description={
@@ -50,7 +50,7 @@ export const InfoGeral = () => {
           <div className="linhaInfo top-[85rem] right-[57.5rem]" />
 
           <SubInfo
-            srcImg={require("../../../public/img/deal.svg")}
+            srcImg={require("../../public/img/deal.svg")}
             alt={"deal"}
             title={"Contratos"}
             description={
@@ -60,7 +60,7 @@ export const InfoGeral = () => {
           <div className="linhaInfo top-[85rem] right-[37.5rem]" />
 
           <SubInfo
-            srcImg={require("../../../public/img/secure.svg")}
+            srcImg={require("../../public/img/secure.svg")}
             alt={"secure"}
             title={"Segurança"}
             description={
@@ -70,7 +70,7 @@ export const InfoGeral = () => {
           <div className="linhaInfo top-[85rem] right-[17.5rem]" />
 
           <SubInfo
-            srcImg={require("../../../public/img/earnings.svg")}
+            srcImg={require("../../public/img/earnings.svg")}
             alt={"earnings"}
             title={"Lucros"}
             description={

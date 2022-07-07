@@ -14,7 +14,7 @@ export const FloatingButton = () => {
         }}
       >
         <Image
-          src={require("../../../public/img/logo.png")}
+          src={require("../../public/img/logo.png")}
           alt={"logo"}
           width={50}
           height={50}
@@ -29,7 +29,7 @@ export const FloatingButton = () => {
           w-56 h-16 -left-36 flex justify-around items-center "
           >
             <Image
-              src={require("../../../public/img/wpp-mob.svg")}
+              src={require("../../public/img/wpp-mob.svg")}
               alt={"wpp"}
               width={30}
               height={30}

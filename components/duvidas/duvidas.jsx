@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { TitleSection } from "../infoGeral/titleSection";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export const Duvidas = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10" >
             <div className="flex flex-col md:flex-row md:items-center max-w-full" >
               <Image
-                src={require("../../../public/img/question.svg")}
+                src={require("../../public/img/question.svg")}
                 alt={"altImg"}
                 width={50}
                 height={50}
@@ -38,7 +38,7 @@ export const Duvidas = () => {
             </div>
             <div className="flex flex-col md:flex-row md:items-center max-w-full">
               <Image
-                src={require("../../../public/img/question.svg")}
+                src={require("../../public/img/question.svg")}
                 alt={"altImg"}
                 width={50}
                 height={50}
@@ -56,7 +56,7 @@ export const Duvidas = () => {
             </div>
             <div className="flex flex-col md:flex-row md:items-center max-w-full">
               <Image
-                src={require("../../../public/img/question.svg")}
+                src={require("../../public/img/question.svg")}
                 alt={"altImg"}
                 width={50}
                 height={50}
@@ -74,7 +74,7 @@ export const Duvidas = () => {
             </div>
             <div className="flex flex-col md:flex-row md:items-center max-w-full">
               <Image
-                src={require("../../../public/img/question.svg")}
+                src={require("../../public/img/question.svg")}
                 alt={"altImg"}
                 width={50}
                 height={50}

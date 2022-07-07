@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div className="w-1/6 lg:w-1/12 lg:mt-8">
           <Image
-            src={require("../../../public/img/logo.png")}
+            src={require("../../public/img/logo.png")}
             alt={"logo"}
             width={50}
             height={50}
