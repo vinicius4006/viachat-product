@@ -5,6 +5,7 @@ import { Chat } from "../components/beneficios/chat";
 import { Duvidas } from "../components/duvidas/duvidas";
 import { Contato } from "../components/contato/contato";
 import Precos from "../components/precos/precos";
+import { NewHeroSection } from "../components/heroSection/newHeroSection";
 
 
 
@@ -20,8 +21,10 @@ export default function Home() {
       <div id="home">
         <div id="home2"></div>
       </div>
-
-      <HeroSection />
+    <NewHeroSection />
+    
+ 
+      {/* <HeroSection />
 
        <InfoGeral />
 
@@ -31,7 +34,7 @@ export default function Home() {
       
       <Chat />
       <Duvidas />
-      <Contato /> 
+      <Contato />  */}
      
       
     </main>

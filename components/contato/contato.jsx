@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 import { TitleSection } from "../infoGeral/titleSection";
-import { useWindowSize } from "../heroSection/hook";
+import { useWindowSize } from "../../hooks/hook";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";

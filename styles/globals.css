@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,8 +26,24 @@
   src: url("./fonts/Rubik/static/Rubik-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/exo/v20/4UaZrEtFpBI4f1ZSIK9d4LjJ4lM3OwpmO24p.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 * {
   @apply m-0 p-0 box-border font-rubik;
+}
+
+html,body
+{
+  font-family: 'Exo 2', sans-serif;
+  
 }
 
 .entrarButton {
@@ -38,7 +56,7 @@
 .efeitoUnderline {
   @apply cursor-pointer inline-block relative 
   after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[0.125rem]
- after:bottom-0 after:left-0 after:bg-slate-900 after:origin-bottom-right after:transition-transform after:duration-300
+ after:bottom-0 after:left-0  after:origin-bottom-right after:transition-transform after:duration-300
  hover:after:scale-x-100 hover:after:origin-bottom-left;
 }
 

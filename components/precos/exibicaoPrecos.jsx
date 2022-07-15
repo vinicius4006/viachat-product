@@ -1,4 +1,4 @@
-import { useWindowSize } from "../heroSection/hook";
+import { useWindowSize } from "../../hooks/hook";
 
 import React from "react";
 

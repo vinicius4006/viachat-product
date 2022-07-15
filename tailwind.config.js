@@ -14,6 +14,7 @@ module.exports = {
         federo: ["Federo", "regular"],
         otama: ["Otama", "regular"],
         rubik: ["Rubik", "regular"],
+        exo: ["Exo", "regular"],
       },
       backgroundImage: {
         'cool-background': "url('/img/cool-background.svg')",

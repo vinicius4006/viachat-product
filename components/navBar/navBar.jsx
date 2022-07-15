@@ -1,24 +1,30 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+
+import {  useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link as Li } from "react-scroll";
+import { usePosition } from "../../hooks/usePosition.js";
+
 
 export const NavBar = () => {
   const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    console.log("Build Header");
-  }, []);
-  console.log('NAVBAR')
+  const positionScroll = usePosition();
+
+  console.log(positionScroll);
+  console.log("NAVBAR");
   return (
     <>
-      <nav className="shadow-sm bg-white fixed w-full z-10 pt-2">
+      <nav
+        className={`${
+          positionScroll != 0 || visible ? "bg-white" : "bg-transparent"
+        } fixed w-full z-10 pt-6`}
+      >
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
             {/* First Block */}
-            <div className="flex items-center mx-5 md:mx-20 justify-between w-full">
-              <div className="flex w-full justify-between md:px-36 items-center flex-shrink-0">
-                <div className="text-xl cursor-pointer mr-16">
+            <div className="flex items-center mx-5 justify-between w-full">
+              <div className="flex w-full justify-between px-5 items-center flex-shrink-0">
+                <div className="text-3xl cursor-pointer mr-16">
                   <Li
                     activeClass="home"
                     to="home"
@@ -40,20 +46,25 @@ export const NavBar = () => {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="font-kroneOne text-[#00d7b5] text-center relative bottom-3 left-1"
+                    className={` font-semibold  relative bottom-3 left-1 ${
+                      positionScroll != 0 || visible  ? "text-[#00d7b5]" : "text-white"
+                    } `}
                   >
-                     ViaChat
+                    ViaChat
                   </Li>
                 </div>
                 <div className="hidden md:block">
-                  <div className="flex justify-between w-[25rem] items-baseline space-x-4 text-[0.95rem]">
+                  <div
+                    className="flex justify-between w-[25rem] 
+                  items-baseline space-x-4 text-[0.95rem]"
+                  >
                     <Li
                       activeClass="precos"
                       to="precos"
                       smooth={true}
                       offset={50}
                       duration={500}
-                      className="efeitoUnderline"
+                      className={`${positionScroll == 0 ? "text-white after:bg-white" : "text-black after:bg-slate-900"} efeitoUnderline`}
                     >
                       Quanto custa?
                     </Li>
@@ -64,7 +75,7 @@ export const NavBar = () => {
                       smooth={true}
                       offset={50}
                       duration={500}
-                      className="efeitoUnderline"
+                      className={`${positionScroll == 0 ? "text-white after:bg-white" : "text-black after:bg-slate-900"} efeitoUnderline`}
                     >
                       Dúvidas
                     </Li>
@@ -75,7 +86,7 @@ export const NavBar = () => {
                       smooth={true}
                       offset={50}
                       duration={500}
-                      className="efeitoUnderline"
+                      className={`${positionScroll == 0 ? "text-white after:bg-white" : "text-black after:bg-slate-900"} efeitoUnderline`}
                     >
                       Contato
                     </Li>

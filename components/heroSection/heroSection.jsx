@@ -1,7 +1,7 @@
 import Lottie from "react-lottie";
 import { useEffect } from "react";
 import React from "react";
-import { useWindowSize } from "./hook";
+import { useWindowSize } from "../../hooks/hook";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ButtonExperimente } from "./buttonExperiment";

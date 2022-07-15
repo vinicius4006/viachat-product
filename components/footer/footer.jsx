@@ -19,35 +19,32 @@ export default function Footer() {
       <div className="flex flex-col items-center lg:flex-row lg:justify-around lg:px-36">
         <div className="flex flex-col items-start w-screen lg:w-1/2 p-5 font-josefin-sans">
           <span className="text-3xl p-2 font-kroneOne">ViaChat</span>
-          <span>
-            <FontAwesomeIcon icon={faEnvelope} className="mr-4" />
-            contato@viachat.com.br
-          </span>
+         
           <div>
-            <span className="mt-5 text-sm">
-              {" "}
-              <FontAwesomeIcon icon={faLocationDot} className="mr-4" />
-              Rua Odinéia Martins Viana, 30 Conjunto Planalto II Imperatriz - MA
-            </span>
+           
           </div>
         </div>
 
         <div className="flex flex-col mb-5 font-semibold h-36 justify-around lg:mt-5">
-          <span>
+          <span className="mb-2">
             <FontAwesomeIcon icon={faCircleCheck} className="h-5 mr-2" />{" "}
             Aumento nas vendas
           </span>
-          <span>
+          <span className="mb-2">
             <FontAwesomeIcon icon={faHeadset} className=" h-5 mr-2" /> Suporte
             dedicado
           </span>
-          <span className="">
+          <span className="mb-2">
             <FontAwesomeIcon icon={faMoneyBill} className="h-5 mr-2" />{" "}
             Pagamento 100% seguro
           </span>
-          <span>
+          <span className="mb-2">
             <FontAwesomeIcon icon={faFileContract} className="h-5 mr-3" />{" "}
             Termos e política de privacidade
+          </span>
+           <span className="mb-2">
+            <FontAwesomeIcon icon={faEnvelope} className="mr-4" />
+            contato@viachat.com.br
           </span>
         </div>
 

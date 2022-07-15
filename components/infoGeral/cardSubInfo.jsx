@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { useWindowSize } from "../heroSection/hook";
+import { useWindowSize } from "../../hooks/hook";
 export const SubInfo = ({ srcImg, altImg, title, description }) => {
   const size = useWindowSize();
   return (
