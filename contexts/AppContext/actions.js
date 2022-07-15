@@ -1,4 +1,6 @@
 export const actions = {
     CHANGE_RESULT : "mudarResultado",
-    CLEAN_ALL: "limpar"
+    CLEAN_ALL: "limpar",
+
+
 }

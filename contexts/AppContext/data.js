@@ -1,6 +1,9 @@
-
-
 export const globalState = {
-    resultado: 369.4,
-    limpar: false
-  }
+  whatsapp: 49.9,
+  instagram: 49.9,
+  messenger: 49.9,
+  telegram: 49.9,
+  bots: 99.9,
+  atendentes: 69.9,
+
+}

@@ -1,9 +1,14 @@
-import CardPreco from "./cardPreco";
 import { useWindowSize } from "../heroSection/hook";
 
+import React from "react";
+
 import { ButtonExperimente } from "../heroSection/buttonExperiment";
-export const Exibicao = () => {
+import { Cards } from "./cards";
+import { AppContext } from "../../contexts/AppContext";
+
+export default React.memo(function Exibicao() {
   const size = useWindowSize();
+  console.log("Exibicao");
   return (
     <section className="flex flex-col justify-center items-center">
       <h1 className="text-5xl text-center font-bold">
@@ -13,58 +18,18 @@ export const Exibicao = () => {
         Faça o seu plano personalizado que se encaixe com o seu orçamento
       </p>
       <div className="flex flex-col items-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <CardPreco
-            alt={"wpp"}
-            icone={require("../../public/img/whatsapp.svg")}
-            label={"Quantidade de números"}
-            key={"wpp"}
-          />
-          <CardPreco
-            alt={"inst"}
-            icone={require("../../public/img/instagram.svg")}
-            label={"Quantidade de perfis"}
-            key={"inst"}
-          />
-          <CardPreco
-            alt={"mess"}
-            icone={require("../../public/img/messenger.svg")}
-            label={"Quantidade de páginas"}
-            key={"mess"}
-          />
-
-          <CardPreco
-            alt={"tele"}
-            icone={require("../../public/img/telegram.svg")}
-            label={"Quantidade de números"}
-            key={"tele"}
-          />
-          <CardPreco
-            alt={"rob"}
-            icone={require("../../public/img/robot.svg")}
-            label={"Quantidade de bots"}
-            key={"rob"}
-          />
-          <CardPreco
-            alt={"people"}
-            icone={require("../../public/img/people.svg")}
-            label={"Quantidade de Atendentes"}
-            key={"people"}
-          />
-          <div className="relative md:left-[22rem] right-auto">
-            <CardPreco
-              alt={"results"}
-              icone={require("../../public/img/coin.svg")}
-              label={"Total"}
-              visiblePlusMinus={true}
-              key={"results"}
-            />
-          </div>
+        <div className="md:flex">
+          <AppContext>
+            <Cards />
+          </AppContext>
         </div>
-        <span className="mt-5 text-xs">
+        <span className="text-base mt-8 text-center w-8/12 md:w-auto">
           *Os valores mostrados serão pagos mensalmente
         </span>
-        <div className=" ml-5 mt-[8rem] text-2xl text-center md:text-4xl text-white flex flex-col items-center">
+        <div
+          className=" ml-5 mt-12 md:mt-[5rem] text-2xl text-center 
+        md:text-4xl text-white flex flex-col items-center"
+        >
           <span>
             {" "}
             Curtiu o orçamento?
@@ -83,4 +48,4 @@ export const Exibicao = () => {
       </div>
     </section>
   );
-};
+});

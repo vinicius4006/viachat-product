@@ -113,7 +113,7 @@ export const Chat = () => {
           attributes={"text-center"}
           topTitle={"Plataforma completa"}
           title={"Tudo em um lugar só"}
-          attTitle={'text-6xl mb-2'}
+          attTitle={'text-5xl mb-2'}
           subTitle={
             "Conecte todos em um só lugar e tenha gerenciamento e controle de todos os processos"
           }
@@ -132,6 +132,7 @@ export const Chat = () => {
                   options={{ ...defaultOptions, loop: animation }}
                   width={50}
                   height={50}
+                  style={{cursor: 'context-menu'}}
                 />
                 <p className="text-sm w-[12rem] ml-5 font-semibold">
                   Eficiência
@@ -142,6 +143,7 @@ export const Chat = () => {
                   options={{ ...defaultOptions, loop: animation }}
                   width={50}
                   height={50}
+                  style={{cursor: 'context-menu'}}
                 />
                 <p className="text-sm w-[12rem] ml-5 font-semibold">
                   Prático
@@ -154,6 +156,7 @@ export const Chat = () => {
                   options={{ ...defaultOptions, loop: animation }}
                   width={50}
                   height={50}
+                  style={{cursor: 'context-menu'}}
                 />
                 <p className="text-sm w-[12rem] ml-5 font-semibold">
                   Sem atrasos
@@ -164,6 +167,7 @@ export const Chat = () => {
                   options={{ ...defaultOptions, loop: animation }}
                   width={50}
                   height={50}
+                  style={{cursor: 'context-menu'}}
                 />
                 <p className="text-sm w-[12rem] ml-5 font-semibold">
                   Controle

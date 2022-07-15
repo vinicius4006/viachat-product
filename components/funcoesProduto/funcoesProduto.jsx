@@ -87,7 +87,7 @@ console.log('Build Funcoes')
           attributes={"text-left ml-12 md:ml-48 mb-20 md:mb-40"}
           topTitle={"escale sua empresa"}
           title={"O que você ganha?"}
-          attTitle={'text-6xl mb-2'}
+          attTitle={'text-5xl mb-2'}
           subTitle={
             "Tudo o que sua empresa precisa e muito mais..."
           }

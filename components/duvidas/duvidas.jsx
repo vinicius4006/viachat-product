@@ -16,7 +16,7 @@ export const Duvidas = () => {
        bg-blobscene-top bg-right-bottom bg-cover rounded-2xl py-7 md:p-10 shadow-md">
         <section>
           <TitleSection attributes={"text-center mb-10"} 
-          title={"Dúvidas Frequentes"} attTitle={'text-6xl'}/>
+          title={"Dúvidas Frequentes"} attTitle={'text-5xl'}/>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10" >
             <div className="flex flex-col md:flex-row md:items-center max-w-full" >
               <Image

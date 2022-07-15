@@ -16,6 +16,7 @@ export default function Home() {
       className="flex flex-col items-center
     max-w-full"
     >
+
       <div id="home">
         <div id="home2"></div>
       </div>

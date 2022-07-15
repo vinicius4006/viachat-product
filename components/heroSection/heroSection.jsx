@@ -6,20 +6,28 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ButtonExperimente } from "./buttonExperiment";
 
-
 export const HeroSection = () => {
-  const widthSvg = 500
+  const widthSvg = 450;
   const size = useWindowSize();
 
   useEffect(() => {
-    console.log('Build HeroSection Main')
+    console.log("Build HeroSection Main");
   }, []);
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
     stop: true,
-    animationData: require("../../public/img/lotties/whatsapp.json"),
+    animationData: require("../../public/img/lotties/wppIcon.json"),
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const defaultOptions2 = {
+    loop: true,
+    autoplay: true,
+    stop: true,
+    animationData: require("../../public/img/lotties/robot-assist.json"),
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -43,33 +51,36 @@ export const HeroSection = () => {
               opacity: 1,
               transition: {
                 delay: 0.7,
-            
               },
             },
           }}
         >
           <div className="flex-col md:ml-20 mt-5 md:mt-auto">
             <h1 className="text-gray-900">
-              Ambiente integrado com <span className="text-green-600 font-bold">WhatsApp</span>?
-              <br /> O <span className="text-green-600 font-bold">melhor</span> pelo melhor <span className="underline">preço</span>
+              Ambiente integrado com{" "}
+              <span className="text-green-600 font-bold">WhatsApp</span>?
+              <br /> O <span className="text-green-600 font-bold">
+                melhor
+              </span>{" "}
+              pelo melhor <span className="underline">preço</span>
             </h1>
             <p className="text-sm mt-2 opacity-60">
-              Tenha tudo perto de você com tecnologia de ponta <br /> e que satisfaça as necessidades da sua empresa
+              Tenha tudo perto de você com tecnologia de ponta <br /> e que
+              satisfaça as necessidades da sua empresa
             </p>
-           <ButtonExperimente />
+            <ButtonExperimente />
           </div>
         </motion.div>
         {size.width <= 760 ? (
           <>
-           <div className="my-8 ml-5">
-           <Image
-              src={require("../../public/img/wpp-mob.svg")}
-              alt={"wpp-mob"}
-              width={150}
-              height={150}
-              
-            />
-           </div>
+            <div className="my-8 ml-5">
+              <Image
+                src={require("../../public/img/wpp-mob.svg")}
+                alt={"wpp-mob"}
+                width={150}
+                height={150}
+              />
+            </div>
           </>
         ) : (
           <>
@@ -77,12 +88,21 @@ export const HeroSection = () => {
               options={defaultOptions}
               width={widthSvg}
               height={widthSvg}
+              style={{cursor: 'context-menu'}}
             />
           </>
         )}
+        <div className="hidden md:block md:absolute top-[30rem] left-[20rem]">
+          <Lottie
+            options={{
+              ...defaultOptions2,
+            }}
+            width={200}
+            height={200}
+            style={{cursor: 'context-menu'}}
+          />
+        </div>
       </div>
     </section>
   );
 };
-
-

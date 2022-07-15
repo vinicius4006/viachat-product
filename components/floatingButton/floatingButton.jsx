@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 export const FloatingButton = () => {
   const [visible, setVisible] = useState(true);
+  console.log('Floating Button')
   return (
     <div
       className="fixed md:top-[40rem] bg-white w-16 h-16 rounded-full md:left-[80rem] 

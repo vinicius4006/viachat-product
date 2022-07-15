@@ -20,10 +20,9 @@
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('./fonts/Rubik/static/Rubik-Regular.ttf');
+  font-family: "Rubik";
+  src: url("./fonts/Rubik/static/Rubik-Regular.ttf");
 }
-
 
 * {
   @apply m-0 p-0 box-border font-rubik;
@@ -49,15 +48,23 @@
 }
 
 .estiloTipoGrid {
-  @apply flex flex-col items-center w-[8.25rem];
+  @apply flex flex-col items-center w-[12rem] h-[12rem] 
+  md:w-[18rem] md:h-[18rem] md:bg-white rounded-full;
 }
 
-.spanText {
-  @apply text-xs mt-2 text-gray-600;
-}
+/* .spanText {
+  @apply text-xs md:text-base text-center mt-2 
+  max-w-[10rem] md:max-w-[10rem] text-gray-600;
+} */
 
-.pText {
-  @apply text-sm;
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
 }
 
 .linhaInfo {
@@ -93,7 +100,7 @@ textarea {
 }
 
 .container {
-  @apply relative w-[5rem] h-[3.1rem] rounded-[3.1rem] border-2 
+  @apply relative w-[4rem] h-[2.1rem] rounded-[3.1rem] border-2 
   border-solid border-blue-400 duration-500 hover:w-32 
   hover:border-2 hover:border-solid hover:border-blue-500;
 }
@@ -120,8 +127,8 @@ textarea {
 }
 
 .box span {
-  @apply absolute block w-full h-full text-center 
-leading-10 text-black text-2xl;
+  @apply absolute block w-full h-full text-center bottom-1.5 
+leading-10 text-black text-xl;
 }
 
 .bn632-hover {

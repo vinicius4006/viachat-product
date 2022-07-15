@@ -15,8 +15,8 @@ const defaultOptions = {
 };
 
 const options = {
-  headers: {'Content-Type': 'application/json'}
-}
+  headers: { "Content-Type": "application/json" },
+};
 
 export const Contato = () => {
   const [widthSvg, setWidthSvg] = useState(0);
@@ -40,7 +40,7 @@ export const Contato = () => {
       assunto: assunto,
     };
     axios
-      .post("http://localhost:3000/api/email", objContact, options)
+      .post("http://10.1.2.218:3000/api/email", objContact, options)
       .then(() => {
         Swal.fire(
           "Enviado",
@@ -71,16 +71,14 @@ export const Contato = () => {
       </svg>
       <section className="w-full flex justify-center">
         <div
-          className="w-10/12 md:w-[60rem] md:h-[30rem] flex items-center
+          className="w-10/12 md:w-[60rem] md:h-[30rem] flex flex-col md:flex-row items-center
          bg-white shadow-lg rounded-2xl "
         >
           <div className="ml-5 flex-col">
             <TitleSection
-              attributes={
-                "absolute md:relative top-[355.5rem] md:top-auto left-2"
-              }
+              attributes={"relative top-auto left-2"}
               title={"Contato"}
-              attTitle={"md:text-6xl ml-12 text-[1.5rem]"}
+              attTitle={"relative bottom-[2.5rem] right-16 md:static md:text-5xl md:ml-12 text-[1.5rem]"}
             />
             {widthSvg == 240 ? (
               <div></div>
@@ -90,6 +88,7 @@ export const Contato = () => {
                   options={defaultOptions}
                   width={widthSvg}
                   height={heightSvg}
+                  style={{cursor: 'context-menu'}}
                 />
               </div>
             )}

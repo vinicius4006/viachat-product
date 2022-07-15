@@ -9,6 +9,7 @@ export const NavBar = () => {
   useEffect(() => {
     console.log("Build Header");
   }, []);
+  console.log('NAVBAR')
   return (
     <>
       <nav className="shadow-sm bg-white fixed w-full z-10 pt-2">

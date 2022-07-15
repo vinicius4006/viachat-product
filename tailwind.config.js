@@ -29,7 +29,13 @@ module.exports = {
         'blob-up': "url('/img/blob-up.svg')",
         'blob-middle': "url('/img/blob-middle.svg')",
         'blob-complexity': "url('/img/blob-complexity.svg')",
-        'blurry-gradient': "url('/img/blurry-gradient.svg')"
+        'bg-blob-fixed-green': "url('/img/bg-blob-fixed.svg')"
+      },
+      keyframes:{
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
       }
     },
   },
