@@ -2,11 +2,11 @@ import { globalState as globalValues } from "../../contexts/AppContext/data";
 import NewCard from "./newCard";
 export const Cards = () => {
   console.log("cards");
-  const { whatsapp, instagram, messenger, telegram, bots, atendentes } =
+  const { whatsapp, instagram, messenger, telegram, bots, atendentes, canais } =
     globalValues;
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <NewCard
           alt={"wpp"}
           icone={require("../../public/img/whatsapp.svg")}
@@ -50,18 +50,31 @@ export const Cards = () => {
           key={"people"}
           valor={atendentes}
         />
-      </div>
-      <div className="relative md:top-28 top-3">
         <NewCard
-          alt={"results"}
-          icone={require("../../public/img/coin.svg")}
-          label={"Total"}
-          visiblePlusMinus={true}
-          key={"results"}
-          valor={
-            whatsapp + instagram + telegram + atendentes + bots + messenger
-          }
+          alt={"canais"}
+          icone={require("../../public/img/canais.svg")}
+          label={"Quantidade de Canais"}
+          key={"canais"}
+          valor={canais}
         />
+        <div className="relative">
+          <NewCard
+            alt={"results"}
+            icone={require("../../public/img/coin.svg")}
+            label={"Total"}
+            visiblePlusMinus={true}
+            key={"results"}
+            valor={
+              whatsapp +
+              instagram +
+              telegram +
+              atendentes +
+              bots +
+              messenger +
+              canais
+            }
+          />
+        </div>
       </div>
     </div>
   );

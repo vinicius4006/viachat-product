@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
 import { useWindowSize } from "../../hooks/hook";
 export const SubInfo = ({ srcImg, altImg, title, description }) => {
   const size = useWindowSize();
@@ -7,27 +6,25 @@ export const SubInfo = ({ srcImg, altImg, title, description }) => {
     // className="estiloTipoGrid"
 
     <div
-      className={`bg-white flex justify-center w-10/12 h-[12rem] ml-auto mr-auto 
-      md:w-[20.16rem] md:h-[13.44rem] rounded-lg duration-500`}
+      className={`bg-white border-4 flex justify-center w-10/12 ml-auto mr-auto 
+      md:w-7/12 mb-2 rounded-lg duration-500 shadow-lg shadow-slate-400`}
       // onMouseOver={() => setShowMore(true)}
       // onMouseOut={() => setShowMore(true)}
     >
       {/* className="pText" */}
-      <div className={`relative top-6 left-2 md:left-auto`}>
-        <p className="text-xl md:text-3xl font-semibold">{title}</p>
+      <div className={`mt-2 p-5`}>
+        <p className="text-xl md:text-2xl font-medium text-[#207175]">{title}</p>
+        <div className="w-64 h-0.5 bg-black my-4" />
         {/* className="spanText" */}
-        <div className="w-[15rem] text-base mt-2">
+        <div className="text-base md:text-xl mt-2 h-full">
           <span>{description}</span>
         </div>
       </div>
-      <div className="md:absolute relative scale-150 translate-y-5 translate-x-4 md:translate-y-0 md:translate-x-48 duration-500 ease-in-out">
-        <Image
-          src={srcImg}
-          alt={altImg}
-          width={size.width <= 760 ? 170 : 110}
-          height={size.width <= 760 ? 300 : 210}
-          className='absolute'
-        />
+      <div
+        className="absolute -translate-y-8 translate-x-[9rem]
+       md:translate-x-40 duration-500 ease-in-out"
+      >
+        <Image src={srcImg} alt={altImg} width={70} height={70} />
       </div>
     </div>
   );

@@ -5,5 +5,6 @@ export const globalState = {
   telegram: 49.9,
   bots: 99.9,
   atendentes: 69.9,
+  canais: 49.9
 
 }

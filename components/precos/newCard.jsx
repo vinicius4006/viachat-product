@@ -43,7 +43,7 @@ export default React.memo(function NewCard({
       }
     } else {
       setValue(num * valor);
-      return num * valor;
+      return (num * valor == 0 ? 1 * valor : num * valor);
     }
   };
   const aumentarUnidade = () => {
@@ -72,7 +72,8 @@ export default React.memo(function NewCard({
           payload:
             alt == "people"
               ? resultado - resultadoCard(num + 1) + resultadoCard(num)
-              : resultado - (num != 0 ? resultadoCard(num) / num : resultadoCard(1) / 1),
+              : resultado -
+                (num != 0 ? resultadoCard(num) / num : resultadoCard(num) / (num + 1)),
         });
 
         return num;
@@ -81,9 +82,9 @@ export default React.memo(function NewCard({
   };
 
   useEffect(() => {
-    if(globalState.state.limpar){
+    if (globalState.state.limpar) {
       setValue(valor);
-      setUnidade(1)
+      setUnidade(1);
     }
   }, [globalState, valor, unidade]);
 
@@ -91,8 +92,12 @@ export default React.memo(function NewCard({
   return (
     <>
       <div
-        className={`w-[15rem] h-[10rem] bg-white shadow-md
-        border-[0.3rem] border-blue-200 rounded-[15rem] 
+        className={`w-[15rem] h-[10rem] ${
+          visiblePlusMinus
+            ? "bg-[#fff] border-[#FFC738]"
+            : "bg-white border-[0.3rem]"
+        }  shadow-md   border-[0.3rem]
+        border-blue-200 rounded-[15rem] 
        flex flex-col items-center justify-center`}
       >
         <Image
@@ -101,12 +106,13 @@ export default React.memo(function NewCard({
           width={visiblePlusMinus ? 70 : 40}
           height={visiblePlusMinus ? 70 : 40}
         />
+
         <p
           className={`md:-mt-2 text-base md:text-base ${
-            visiblePlusMinus ? "text-lg md:text-2xl" : ""
+            visiblePlusMinus ? "text-lg md:text-2xl text-black" : ""
           }`}
         >
-          <span className="relative top-3"> {label}</span>
+          <span className={`relative top-3`}> {label}</span>
         </p>
 
         {visiblePlusMinus ? (
@@ -124,7 +130,7 @@ text-xs left-6"
             >
               LIMPAR
             </button>
-            <span className="relative top-2">
+            <span className="relative top-2 font-kroneOne text-lg text-gray-900">
               R$ {Number(resultado).toFixed(2)}
             </span>
           </div>

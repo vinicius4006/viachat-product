@@ -54,7 +54,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className="flex justify-center items-center cursor-pointer md:ml-2
+      className="hidden md:flex justify-center items-center cursor-pointer md:ml-2
       bg-[#00C8C4] rounded-3xl absolute bottom-[-12vh] md:bottom-auto md:top-[27.18rem] left-[11rem] md:left-[10rem]"
       onClick={onClick}
     >
@@ -72,7 +72,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="flex justify-center items-center cursor-pointer
+      className="hidden md:flex justify-center items-center cursor-pointer
       bg-[#00C8C4] rounded-3xl absolute top-[14rem] md:top-[27.18rem] left-[6.6rem] md:left-[6.4rem] 
       "
       onClick={onClick}
@@ -100,14 +100,8 @@ export const Chat = () => {
   }, [size]);
 
   return (
-    <div className="w-full  relative md:bottom-10 top-[3rem] md:top-auto">
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fillOpacity="1"
-          d="M0,0L48,26.7C96,53,192,107,288,112C384,117,480,75,576,101.3C672,128,768,224,864,224C960,224,1056,128,1152,90.7C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-        ></path>
-      </svg> */}
+    <div className="w-full h-full pt-20 pb-32 bg-white rounded-b-[10rem]">
+    
       <section className="flex flex-col items-center">
         <TitleSection
           attributes={"text-center"}
@@ -120,11 +114,11 @@ export const Chat = () => {
           attSubTitle={"ml-auto mr-auto"}
         />
         <div
-          className="absolute flex flex-col md:flex-row w-full md:w-[80rem] h-[25rem] 
+          className="flex flex-col md:flex-row w-full md:w-[80rem] h-[25rem] 
           
         justify-between items-center top-[22rem] md:top-[30rem]"
         >
-          <div className="absolute bg-blob-complexity bg-cover bg-right-top h-[25rem] md:h-[42rem] w-full top-[12rem] md:top-[18rem]" id="duvidas" />
+          <div className=" bg-blob-complexity bg-cover bg-right-top h-[25rem] md:h-[42rem] w-full top-[12rem] md:top-[18rem]" id="duvidas" />
           <div className="flex flex-col items-center gap-[1rem] md:gap-[3rem]">
             <div className="flex flex-col md:flex-row">
               <div className="flex items-center md:max-w-[20rem]">
@@ -134,8 +128,8 @@ export const Chat = () => {
                   height={50}
                   style={{cursor: 'context-menu'}}
                 />
-                <p className="text-sm w-[12rem] ml-5 font-semibold">
-                  Eficiência
+                <p className="text-xl w-[12rem] ml-5 font-semibold">
+                  Dashboard
                 </p>
               </div>
               <div className="flex items-center md:max-w-[20rem]">
@@ -145,12 +139,12 @@ export const Chat = () => {
                   height={50}
                   style={{cursor: 'context-menu'}}
                 />
-                <p className="text-sm w-[12rem] ml-5 font-semibold">
-                  Prático
+                <p className="text-xl w-[12rem] ml-5 font-semibold">
+                  Chat
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row relative bottom-3">
               <div className="flex items-center md:max-w-[20rem]">
                 <Lottie
                   options={{ ...defaultOptions, loop: animation }}
@@ -158,8 +152,8 @@ export const Chat = () => {
                   height={50}
                   style={{cursor: 'context-menu'}}
                 />
-                <p className="text-sm w-[12rem] ml-5 font-semibold">
-                  Sem atrasos
+                <p className="text-xl w-[12rem] ml-5 font-semibold">
+                  Analytics
                 </p>
               </div>
               <div className="flex items-center md:max-w-[20rem]">
@@ -169,8 +163,8 @@ export const Chat = () => {
                   height={50}
                   style={{cursor: 'context-menu'}}
                 />
-                <p className="text-sm w-[12rem] ml-5 font-semibold">
-                  Controle
+                <p className="text-xl w-[12rem] ml-5 font-semibold">
+                  Contatos
                 </p>
               </div>
             </div>
@@ -217,13 +211,7 @@ export const Chat = () => {
           </div>
         </div>
       </section>
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fillOpacity="1"
-          d="M0,0L48,26.7C96,53,192,107,288,112C384,117,480,75,576,101.3C672,128,768,224,864,224C960,224,1056,128,1152,90.7C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg> */}
+    
     </div>
   );
 };

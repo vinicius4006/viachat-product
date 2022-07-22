@@ -1,7 +1,5 @@
 import { useWindowSize } from "../../hooks/hook";
-
 import React from "react";
-
 import { ButtonExperimente } from "../heroSection/buttonExperiment";
 import { Cards } from "./cards";
 import { AppContext } from "../../contexts/AppContext";
@@ -11,10 +9,10 @@ export default React.memo(function Exibicao() {
   console.log("Exibicao");
   return (
     <section className="flex flex-col justify-center items-center">
-      <h1 className="text-5xl text-center font-bold">
+      <h1 className="text-5xl text-center font-medium text-white">
         Faça aqui sua <span className="underline">simulação</span>
       </h1>
-      <p className="text-xl w-10/12 md:w-1/3 text-center my-5">
+      <p className="text-xl w-10/12 md:w-1/3 text-center my-5 text-white">
         Faça o seu plano personalizado que se encaixe com o seu orçamento
       </p>
       <div className="flex flex-col items-center">

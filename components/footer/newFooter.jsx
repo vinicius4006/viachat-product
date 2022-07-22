@@ -67,7 +67,7 @@ export const NewFooter = () => {
         </div>
       
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center relative bottom-5">
         <span>©2022 ViaChat. All rights reserved.</span>
        
       </div>

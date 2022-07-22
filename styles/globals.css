@@ -40,10 +40,9 @@
   @apply m-0 p-0 box-border font-rubik;
 }
 
-html,body
-{
-  font-family: 'Exo 2', sans-serif;
-  
+html,
+body {
+  font-family: "Exo 2", sans-serif;
 }
 
 .entrarButton {
@@ -150,8 +149,10 @@ leading-10 text-black text-xl;
 }
 
 .bn632-hover {
-  @apply w-40 text-base font-semibold text-white cursor-pointer m-5 h-14 text-center
-  border-none bg-[length:300%_100%] rounded-[3.1rem] transition-all duration-300 ease-in-out;
+  @apply md:w-1/3 w-full text-lg font-semibold text-black cursor-pointer m-5 h-10 md:h-14 text-center
+  border-none bg-[length:300%_100%] 
+  rounded-[3.1rem] transition-all 
+  duration-300 ease-in-out;
 }
 
 .bn632-hover:hover {
@@ -168,11 +169,11 @@ leading-10 text-black text-xl;
 
 .bn632-hover.bn18 {
   background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #40e495,
-    #30dd8a,
-    #2bb673
+    to left,
+    #ffd900,
+    #ffd605,
+    #fecb0d,
+    #fdbe22
   );
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
@@ -217,4 +218,31 @@ input:checked + label:after {
 
 label:active:after {
   width: 130px;
+}
+
+/* CSS */
+.button-27 {
+  @apply appearance-none rounded-2xl box-border text-white cursor-pointer
+  inline-block text-xl p-3 mb-5 md:mb-auto md:p-0 md:text-2xl font-semibold m-0 min-h-[4rem] outline-none text-center
+  no-underline transition-all duration-300 select-none touch-manipulation md:w-1/2 
+  will-change-transform;
+}
+
+.button-27 {
+  background-image: linear-gradient(to left, #fff, #fff, #fff, #fff);
+  color: #22bd6e;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

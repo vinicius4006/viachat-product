@@ -17,7 +17,7 @@ export const NavBar = () => {
       <nav
         className={`${
           positionScroll != 0 || visible ? "bg-white" : "bg-transparent"
-        } fixed w-full z-10 pt-6`}
+        } fixed w-full z-10`}
       >
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
